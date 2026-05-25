@@ -1,0 +1,120 @@
+/* ============================================
+   BASE — Body, typography, animations, utilities
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Share+Tech+Mono&display=swap');
+
+body {
+  background: #1a0000;
+  font-family: var(--font-mono);
+  color: var(--txt);
+  background-attachment: fixed;
+}
+
+/* ===== Animations ===== */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes scan {
+  0% { top: 0; opacity: 0; }
+  8% { opacity: 0.5; }
+  92% { opacity: 0.5; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes blink {
+  0%, 88%, 100% { opacity: 1; }
+  94% { opacity: 0.2; }
+}
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.7); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes glowRed {
+  from { box-shadow: none; }
+  to { box-shadow: 0 0 8px #FF444488; }
+}
+
+@keyframes holoShift {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+/* ===== Utility Classes ===== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Scanline overlay ===== */
+.scanlines::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(0, 0, 0, 0.04) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      rgba(0, 0, 0, 0.04) 4px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== Loading dots ===== */
+.dots {
+  display: flex;
+  gap: 5px;
+}
+.dot2 {
+  width: 7px;
+  height: 7px;
+  background: var(--cyan);
+  border-radius: 50%;
+  animation: dotPulse 0.8s ease-in-out infinite;
+}
+.dot2:nth-child(2) { animation-delay: 0.2s; }
+.dot2:nth-child(3) { animation-delay: 0.4s; }
+
+/* ===== Catch bar ===== */
+.cbar {
+  height: 5px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+.cfill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--green), #88FF44);
+  border-radius: 3px;
+}

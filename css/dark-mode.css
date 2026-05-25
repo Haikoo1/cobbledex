@@ -1,0 +1,111 @@
+/* ============================================
+   DARK MODE — Theme overrides
+   Applied when body has class "dark-mode"
+   ============================================ */
+body.dark-mode {
+  --bg: #000C1A;
+  --txt: #E0F7FA;
+  --dim: #80DEEA;
+  --panel: rgba(0, 15, 35, 0.95);
+  --border: rgba(0, 229, 255, 0.55);
+  --shadow-inset: inset 0 0 30px rgba(0, 229, 255, 0.03);
+}
+
+/* ===== Light Mode (default when dark-mode is not present) ===== */
+body:not(.dark-mode) {
+  --bg: #F0F8FF;
+  --txt: #1A2333;
+  --dim: #4A6A8A;
+  --panel: rgba(240, 248, 255, 0.92);
+  --border: rgba(0, 100, 180, 0.35);
+  --cyan: #0066AA;
+  --cyan-d: #005588;
+  --cyan-glow: rgba(0, 100, 180, 0.15);
+  --gold: #AA8800;
+  --green: #228833;
+  --red: #CC2222;
+  --red-d: #881111;
+  --red-l: #DD4444;
+}
+
+body:not(.dark-mode) .dex {
+  background: linear-gradient(150deg, #FFDDDD, #FFCCCC 50%, #EEAAAA);
+}
+
+body:not(.dark-mode) .title-txt {
+  color: #CC6666;
+  text-shadow: 0 0 10px #CC666655;
+}
+
+body:not(.dark-mode) .screen-body {
+  background: #E8F4FD;
+}
+
+body:not(.dark-mode) .screen-body::before {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), transparent);
+}
+
+body:not(.dark-mode) .screen-wrap {
+  background: #CCCCCC;
+  border-color: #999;
+  box-shadow: inset 0 0 20px rgba(0, 50, 100, 0.08);
+}
+
+body:not(.dark-mode) .screen-leds {
+  background: #DDDDDD;
+  border-bottom-color: #BBB;
+}
+
+body:not(.dark-mode) .led.off {
+  background: #888;
+}
+
+body:not(.dark-mode) .sinput input {
+  color: #1A2333;
+}
+
+body:not(.dark-mode) .sinput input::placeholder {
+  color: rgba(0, 100, 180, 0.3);
+}
+
+body:not(.dark-mode) .ab-name,
+body:not(.dark-mode) .d-name {
+  color: #0066AA;
+}
+
+body:not(.dark-mode) .pitem:hover {
+  background: rgba(0, 100, 180, 0.08);
+}
+
+body:not(.dark-mode) .pitem.sel {
+  background: rgba(0, 100, 180, 0.15);
+}
+
+body:not(.dark-mode) .li-name {
+  color: #1A2333;
+}
+
+body:not(.dark-mode) ::-webkit-scrollbar-thumb {
+  background: #0066AA;
+}
+
+body:not(.dark-mode) .sh {
+  color: #0066AA;
+  border-bottom-color: rgba(0, 100, 180, 0.25);
+}
+
+body:not(.dark-mode) .lore {
+  color: #4A6A8A;
+}
+
+/* ===== Smooth Theme Transition ===== */
+body,
+body *,
+body *::before,
+body *::after {
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}

@@ -1,0 +1,158 @@
+{
+  "app": {
+    "title": "Cobbledex — Cobblemon",
+    "subtitle": "✦ COBBLEDEX — EDIÇÃO COBBLEMON ✦",
+    "selectPokemon": "SELECIONE UM POKÉMON",
+    "dataWillAppear": "OS DADOS DO COBBLEMON APARECERÃO AQUI",
+    "includesSpawns": "INCLUINDO BIOMAS, DROPS E SPAWNS",
+    "loading": "CARREGANDO...",
+    "loadingCobblemon": "CARREGANDO COBBLEMON...",
+    "scanningData": "VARRENDO DADOS DO COBBLEMON...",
+    "errorLoading": "ERRO AO CARREGAR DADOS",
+    "connectionError": "ERRO DE CONEXÃO",
+    "evoDataUnavailable": "DADOS DE EVOLUÇÃO INDISPONÍVEIS",
+    "noResults": "NENHUM RESULTADO ENCONTRADO",
+    "noSpecificDrops": "Nenhum drop específico"
+  },
+  "search": {
+    "placeholder": "Nome ou #...",
+    "label": "▸ BUSCAR COBBLEMON",
+    "filterType": "▸ TIPO",
+    "filterGeneration": "▸ GERAÇÃO",
+    "filterStats": "▸ STATS MÍNIMOS",
+    "sortBy": "ORDENAR POR",
+    "sortNumber": "Número",
+    "sortName": "Nome",
+    "sortHp": "HP",
+    "sortAttack": "Ataque",
+    "sortSpeed": "Velocidade",
+    "ascending": "Crescente",
+    "descending": "Decrescente",
+    "filterRarity": "RARIDADE"
+  },
+  "pokemon": {
+    "height": "ALTURA",
+    "weight": "PESO",
+    "rarity": "RARIDADE",
+    "catchRate": "TAXA DE CAPTURA",
+    "spawnLevel": "NÍVEL SPAWN",
+    "context": "CONTEXTO",
+    "favorite": "★ FAV",
+    "unfavorite": "★ DESFAV",
+    "addComparator": "Adicionar ao Comparador",
+    "removeComparator": "Remover do Comparador",
+    "shiny": "✦",
+    "cobblemon": "COBBLEMON",
+    "previous": "← Anterior",
+    "next": "Próximo →",
+    "unknown": "?"
+  },
+  "tabs": {
+    "info": "INFO",
+    "spawn": "SPAWN",
+    "drops": "DROPS",
+    "stats": "STATS",
+    "moves": "MOVES",
+    "weakness": "FRAQUEZAS",
+    "evo": "EVO",
+    "breed": "REPRODUÇÃO"
+  },
+  "info": {
+    "pokedexEntry": "ENTRADA POKÉDEX",
+    "abilities": "HABILIDADES",
+    "baseStatsOverview": "VISÃO GERAL DOS STATUS BASE",
+    "hiddenAbility": "◆ HABILIDADE OCULTA"
+  },
+  "spawn": {
+    "spawnConditions": "CONDIÇÕES DE SPAWN",
+    "wildSpawn": "▸ SPAWN SELVAGEM",
+    "biomes": "BIOMAS",
+    "herdBehavior": "COMPORTAMENTO DE MANADA",
+    "maxHerdSize": "TAMANHO MÁXIMO DA MANADA",
+    "walkSpeed": "VELOCIDADE DE CAMINHADA",
+    "avoidsWater": "EVITA ÁGUA",
+    "willDefend": "DEFENDE TERRITÓRIO",
+    "canSleep": "PODE DORMIR",
+    "yes": "SIM",
+    "no": "NÃO"
+  },
+  "drops": {
+    "cobblemonDrops": "DROPS DO COBBLEMON",
+    "dropInfo": "INFO DE DROPS",
+    "totalDrops": "TOTAL DE DROPS",
+    "types": "tipos",
+    "baseExp": "EXP BASE",
+    "baseFriendship": "AMIZADE BASE"
+  },
+  "stats": {
+    "baseStats": "STATUS BASE",
+    "trainingData": "DADOS DE TREINAMENTO",
+    "catchRate": "TAXA DE CAPTURA",
+    "friendship": "AMIZADE",
+    "growthRate": "TAXA DE CRESCIMENTO",
+    "eggCycles": "CICLOS DE OVO",
+    "baseExp": "EXP BASE",
+    "evYield": "RENDIMENTO EV"
+  },
+  "moves": {
+    "levelUpMoves": "GOLPES DE NÍVEL (Primeiros 20)",
+    "move": "GOLPE",
+    "method": "MÉTODO",
+    "type": "TIPO",
+    "level": "NÍV"
+  },
+  "weakness": {
+    "typeChart": "TABELA DE TIPOS —"
+  },
+  "evo": {
+    "evolutionChain": "CADEIA EVOLUTIVA"
+  },
+  "breed": {
+    "breedingData": "DADOS DE REPRODUÇÃO",
+    "eggGroups": "GRUPOS DE OVO",
+    "hatchSteps": "PASSOS PARA CHOCAR",
+    "genderRatio": "PROPORÇÃO DE GÊNERO",
+    "eggCycles": "CICLOS DE OVO",
+    "cobblemonBreeding": "REPRODUÇÃO COBBLEMON",
+    "spawnLevelRange": "FAIXA DE NÍVEL SPAWN",
+    "walkSpeed": "VELOCIDADE DE CAMINHADA",
+    "genderless": "SEM GÊNERO"
+  },
+  "comparator": {
+    "title": "COMPARADOR",
+    "selectUpTo": "Selecione até 3 Pokémons para comparar",
+    "compare": "Comparar",
+    "close": "Fechar",
+    "noSelection": "Nenhum Pokémon selecionado"
+  },
+  "favorites": {
+    "title": "FAVORITOS",
+    "empty": "Nenhum Pokémon favoritado ainda",
+    "exportJson": "Exportar como JSON"
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Escuro"
+  },
+  "language": {
+    "ptBr": "Português",
+    "en": "English",
+    "switch": "PT | EN"
+  },
+  "pwa": {
+    "install": "Instalar Cobbledex",
+    "installAvailable": "Instalação disponível",
+    "offlineReady": "Cobbledex pronto para uso offline!"
+  },
+  "genLabels": {
+    "1": "Gen 1",
+    "2": "Gen 2",
+    "3": "Gen 3",
+    "4": "Gen 4",
+    "5": "Gen 5",
+    "6": "Gen 6",
+    "7": "Gen 7",
+    "8": "Gen 8",
+    "9": "Gen 9"
+  }
+}

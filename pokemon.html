@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="Cobbledex — Complete Pokédex for the Cobblemon Minecraft mod">
+  <meta name="theme-color" content="#CC0000">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>⚡</text></svg>">
+
+  <title data-i18n="app.title">Cobbledex — Pokémon Detail</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/dark-mode.css">
+</head>
+<body class="dark-mode scanlines">
+  <div class="dex">
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="dot blue"></div>
+      <div class="dot yellow"></div>
+      <div class="dot gray"></div>
+      <div class="title-txt" data-i18n="app.subtitle">✦ COBBLEDEX — COBBLEMON EDITION ✦</div>
+      <div class="header-actions">
+        <button class="header-btn lang-btn" id="langToggle" title="Switch language">PT</button>
+        <button class="header-btn theme-btn" id="themeToggle" aria-label="Toggle theme">☀</button>
+        <button class="header-btn" id="backBtn" title="Back to Pokédex">← BACK</button>
+      </div>
+      <div class="dot gray"></div>
+    </div>
+
+    <div class="layout layout-detail">
+      <!-- LEFT: Screen + Navigation -->
+      <div class="left">
+        <!-- SCREEN -->
+        <div class="screen-wrap">
+          <div class="screen-leds">
+            <div class="led on"></div>
+            <div class="led off"></div>
+            <div class="led off"></div>
+          </div>
+          <div class="screen-body">
+            <div class="scan"></div>
+            <img class="s-sprite" id="sSprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
+            <div class="s-name" id="sName">COBBLEDEX</div>
+            <div class="s-num" id="sNum">#000</div>
+            <div class="s-rarity" id="sRarity" style="color:var(--cyan);border-color:var(--cyan)">SELECT A MON</div>
+            <div class="holo"></div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+          <div class="nav-buttons">
+            <button class="nav-btn" id="prevBtn">← <span data-i18n="pokemon.previous">PREVIOUS</span></button>
+            <button class="nav-btn" id="nextBtn"><span data-i18n="pokemon.next">NEXT</span> →</button>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+          <button class="action-btn fav-btn" id="favBtn">★ <span data-i18n="pokemon.favorite">FAV</span></button>
+          <button class="action-btn specs-btn" id="compBtn">⚖ <span data-i18n="pokemon.addComparator">COMPARE</span></button>
+        </div>
+      </div>
+
+      <!-- RIGHT: Full Detail Panel -->
+      <div class="right" id="rPanel">
+        <div class="loading">
+          <div class="dots">
+            <div class="dot2"></div>
+            <div class="dot2"></div>
+            <div class="dot2"></div>
+          </div>
+          <div data-i18n="app.loadingCobblemon">LOADING COBBLEMON...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./js/pokemon-detail.js"></script>
+</body>
+</html>

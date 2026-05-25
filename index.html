@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="Cobbledex — Complete Pokédex for the Cobblemon Minecraft mod">
+  <meta name="theme-color" content="#CC0000">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>⚡</text></svg>">
+
+  <title data-i18n="app.title">Cobbledex — Cobblemon</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/dark-mode.css">
+</head>
+<body class="dark-mode scanlines">
+  <div class="dex">
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="dot blue"></div>
+      <div class="dot yellow"></div>
+      <div class="dot gray"></div>
+      <div class="title-txt" data-i18n="app.subtitle">✦ COBBLEDEX ✦</div>
+      <div class="header-actions">
+        <button class="header-btn lang-btn" id="langToggle" title="Switch language">PT</button>
+        <button class="header-btn theme-btn" id="themeToggle" aria-label="Toggle theme">☀</button>
+        <button class="header-btn fav-header-btn" id="favHeaderBtn" title="View favorites">★</button>
+      </div>D
+      <div class="dot gray"></div>
+    </div>
+
+    <div class="layout">
+      <!-- LEFT PANEL -->
+      <div class="left">
+        <!-- SCREEN -->
+        <div class="screen-wrap">
+          <div class="screen-leds">
+            <div class="led on"></div>
+            <div class="led off"></div>
+            <div class="led off"></div>
+          </div>
+          <div class="screen-body">
+            <div class="scan"></div>
+            <img class="s-sprite" id="sSprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
+            <div class="s-name" id="sName" data-i18n="app.selectPokemon">COBBLEDEX</div>
+            <div class="s-num" id="sNum">#000</div>
+            <div class="s-rarity" id="sRarity" style="color:var(--cyan);border-color:var(--cyan)">SELECT A MON</div>
+            <div class="holo"></div>
+          </div>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="search-box">
+          <span class="lbl" data-i18n="search.label">▸ SEARCH COBBLEMON</span>
+          <div class="sinput">
+            <span class="si-icon">◈</span>
+            <input id="qInput" data-i18n-placeholder="search.placeholder" placeholder="Name or #..." type="text">
+          </div>
+        </div>
+
+        <!-- TYPE FILTER -->
+        <div class="filter-box">
+          <span class="lbl" data-i18n="search.filterType">▸ TYPE</span>
+          <div class="type-grid" id="typeGrid"></div>
+        </div>
+
+        <!-- RARITY FILTER -->
+        <div class="filter-box">
+          <span class="lbl" data-i18n="search.filterRarity">▸ RARITY</span>
+          <div class="type-grid" id="rarityGrid"></div>
+        </div>
+
+        <!-- GENERATION FILTER -->
+        <div class="filter-box">
+          <span class="lbl" data-i18n="search.filterGeneration">▸ GENERATION</span>
+          <div class="gen-grid" id="genGrid"></div>
+        </div>
+
+        <!-- SORT CONTROLS -->
+        <div class="filter-box">
+          <span class="lbl" data-i18n="search.sortBy">▸ SORT BY</span>
+          <div class="sort-controls" id="sortControls"></div>
+        </div>
+
+        <!-- STAT FILTERS -->
+        <div class="filter-box">
+          <span class="lbl" data-i18n="search.filterStats">▸ MIN STATS</span>
+          <div class="range-grid" id="statFilters"></div>
+        </div>
+
+        <!-- LIST -->
+        <div class="plist" id="pList"></div>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="right" id="rPanel">
+        <div class="empty">
+          <div style="font-size:32px;margin-bottom:8px">⊕</div>
+          <div data-i18n="app.selectPokemon">SELECT A POKÉMON</div>
+          <div style="margin-top:6px;font-size:6px;opacity:.7" data-i18n="app.dataWillAppear">COBBLEMON DATA WILL APPEAR</div>
+          <div style="font-size:6px;opacity:.7" data-i18n="app.includesSpawns">INCLUDING BIOMES, DROPS & SPAWNS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comparator FAB -->
+  <button class="comparator-fab" id="comparatorFAB">⚖ Compare 0 Pokémon</button>
+
+  <!-- Main Entry Point -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

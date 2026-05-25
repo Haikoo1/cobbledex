@@ -1,0 +1,52 @@
+{
+  "name": "Cobbledex — Cobblemon Pokédex",
+  "short_name": "Cobbledex",
+  "description": "Complete Pokédex for the Cobblemon Minecraft mod — search, compare, and track your favorite Cobblemon",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#1a0000",
+  "theme_color": "#CC0000",
+  "categories": ["games", "utilities", "reference"],
+  "lang": "en",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='32' fill='%23CC0000'/%3E%3Ctext x='96' y='140' font-size='120' text-anchor='middle' fill='white'%3E⚡%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='64' fill='%23CC0000'/%3E%3Ctext x='256' y='360' font-size='300' text-anchor='middle' fill='white'%3E⚡%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 800'%3E%3Crect width='1280' height='800' fill='%231a0000'/%3E%3Ctext x='640' y='400' font-size='40' text-anchor='middle' fill='%23E0F7FA' font-family='monospace'%3ECobbledex Screenshot%3C/text%3E%3C/svg%3E",
+      "sizes": "1280x800",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "Cobbledex main interface"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Search Pokémon",
+      "short_name": "Search",
+      "description": "Search and filter Pokémon",
+      "url": "./index.html?q="
+    },
+    {
+      "name": "Favorites",
+      "short_name": "Favorites",
+      "description": "View your favorite Pokémon",
+      "url": "./index.html"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

@@ -1,0 +1,75 @@
+/* ============================================
+   VARIABLES — Design tokens
+   ============================================ */
+:root {
+  /* Cobblemon Red Theme */
+  --red: #CC0000;
+  --red-d: #880000;
+  --red-l: #FF4444;
+
+  /* Cyber Cyan */
+  --cyan: #00E5FF;
+  --cyan-d: #00B8D4;
+  --cyan-glow: rgba(0, 229, 255, 0.25);
+
+  /* Panels & Borders */
+  --panel: rgba(0, 15, 35, 0.9);
+  --border: rgba(0, 229, 255, 0.55);
+  --bg: #000C1A;
+  --txt: #E0F7FA;
+  --dim: #80DEEA;
+
+  /* Accents */
+  --gold: #FFD700;
+  --green: #44FF88;
+
+  /* Stat Colors */
+  --stat-hp: #FF4444;
+  --stat-atk: #FF8833;
+  --stat-def: #FFDD00;
+  --stat-spa: #8888FF;
+  --stat-spd: #44AAFF;
+  --stat-spe: #44FF88;
+
+  /* Type Colors */
+  --type-fire: #FF6633;
+  --type-water: #3399FF;
+  --type-grass: #44BB44;
+  --type-electric: #FFDD00;
+  --type-psychic: #FF66AA;
+  --type-ice: #66CCFF;
+  --type-dragon: #7766EE;
+  --type-dark: #9988AA;
+  --type-fairy: #FF99CC;
+  --type-normal: #AABB99;
+  --type-fighting: #BB5533;
+  --type-flying: #8899FF;
+  --type-poison: #AA5599;
+  --type-ground: #DDBB55;
+  --type-rock: #BBAA44;
+  --type-bug: #AABB22;
+  --type-ghost: #7777BB;
+  --type-steel: #AAAACC;
+
+  /* Typography */
+  --font-mono: 'Press Start 2P', monospace;
+  --font-terminal: 'VT323', monospace;
+  --font-digital: 'Share Tech Mono', monospace;
+
+  /* Spacing */
+  --space-xs: 2px;
+  --space-sm: 4px;
+  --space-md: 8px;
+  --space-lg: 12px;
+  --space-xl: 16px;
+  --space-2xl: 24px;
+
+  /* Transitions */
+  --transition-fast: 0.12s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+
+  /* Shadows */
+  --shadow-cyan: 0 0 10px var(--cyan-glow);
+  --shadow-inset: inset 0 0 30px rgba(0, 229, 255, 0.03);
+}

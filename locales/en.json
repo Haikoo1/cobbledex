@@ -1,0 +1,158 @@
+{
+  "app": {
+    "title": "Cobbledex — Cobblemon",
+    "subtitle": "✦ COBBLEDEX — COBBLEMON EDITION ✦",
+    "selectPokemon": "SELECT A POKÉMON",
+    "dataWillAppear": "COBBLEMON DATA WILL APPEAR",
+    "includesSpawns": "INCLUDING BIOMES, DROPS & SPAWNS",
+    "loading": "LOADING...",
+    "loadingCobblemon": "LOADING COBBLEMON...",
+    "scanningData": "SCANNING COBBLEMON DATA...",
+    "errorLoading": "ERROR LOADING DATA",
+    "connectionError": "CONNECTION ERROR",
+    "evoDataUnavailable": "EVO DATA UNAVAILABLE",
+    "noResults": "NO RESULTS FOUND",
+    "noSpecificDrops": "No specific drops"
+  },
+  "search": {
+    "placeholder": "Name or #...",
+    "label": "▸ SEARCH COBBLEMON",
+    "filterType": "▸ TYPE",
+    "filterGeneration": "▸ GENERATION",
+    "filterStats": "▸ MIN STATS",
+    "sortBy": "SORT BY",
+    "sortNumber": "Number",
+    "sortName": "Name",
+    "sortHp": "HP",
+    "sortAttack": "Attack",
+    "sortSpeed": "Speed",
+    "ascending": "Ascending",
+    "descending": "Descending",
+    "filterRarity": "RARITY"
+  },
+  "pokemon": {
+    "height": "HEIGHT",
+    "weight": "WEIGHT",
+    "rarity": "RARITY",
+    "catchRate": "CATCH RATE",
+    "spawnLevel": "SPAWN LVL",
+    "context": "CONTEXT",
+    "favorite": "★ FAV",
+    "unfavorite": "★ UNFAV",
+    "addComparator": "Add to Comparator",
+    "removeComparator": "Remove from Comparator",
+    "shiny": "✦",
+    "cobblemon": "COBBLEMON",
+    "previous": "← Previous",
+    "next": "Next →",
+    "unknown": "?"
+  },
+  "tabs": {
+    "info": "INFO",
+    "spawn": "SPAWN",
+    "drops": "DROPS",
+    "stats": "STATS",
+    "moves": "MOVES",
+    "weakness": "WEAKNESS",
+    "evo": "EVO",
+    "breed": "BREEDING"
+  },
+  "info": {
+    "pokedexEntry": "POKÉDEX ENTRY",
+    "abilities": "ABILITIES",
+    "baseStatsOverview": "BASE STATS OVERVIEW",
+    "hiddenAbility": "◆ HIDDEN ABILITY"
+  },
+  "spawn": {
+    "spawnConditions": "SPAWN CONDITIONS",
+    "wildSpawn": "▸ WILD SPAWN",
+    "biomes": "BIOMES",
+    "herdBehavior": "HERD BEHAVIOR",
+    "maxHerdSize": "MAX HERD SIZE",
+    "walkSpeed": "WALK SPEED",
+    "avoidsWater": "AVOIDS WATER",
+    "willDefend": "WILL DEFEND",
+    "canSleep": "CAN SLEEP",
+    "yes": "YES",
+    "no": "NO"
+  },
+  "drops": {
+    "cobblemonDrops": "COBBLEMON DROPS",
+    "dropInfo": "DROP INFO",
+    "totalDrops": "TOTAL DROPS",
+    "types": "types",
+    "baseExp": "BASE EXP",
+    "baseFriendship": "BASE FRIENDSHIP"
+  },
+  "stats": {
+    "baseStats": "BASE STATS",
+    "trainingData": "TRAINING DATA",
+    "catchRate": "CATCH RATE",
+    "friendship": "FRIENDSHIP",
+    "growthRate": "GROWTH RATE",
+    "eggCycles": "EGG CYCLES",
+    "baseExp": "BASE EXP",
+    "evYield": "EV YIELD"
+  },
+  "moves": {
+    "levelUpMoves": "LEVEL-UP MOVES (First 20)",
+    "move": "MOVE",
+    "method": "METHOD",
+    "type": "TYPE",
+    "level": "LVL"
+  },
+  "weakness": {
+    "typeChart": "TYPE CHART —"
+  },
+  "evo": {
+    "evolutionChain": "EVOLUTION CHAIN"
+  },
+  "breed": {
+    "breedingData": "BREEDING DATA",
+    "eggGroups": "EGG GROUPS",
+    "hatchSteps": "HATCH STEPS",
+    "genderRatio": "GENDER RATIO",
+    "eggCycles": "EGG CYCLES",
+    "cobblemonBreeding": "COBBLEMON BREEDING",
+    "spawnLevelRange": "SPAWN LVL RANGE",
+    "walkSpeed": "WALK SPEED",
+    "genderless": "GENDERLESS"
+  },
+  "comparator": {
+    "title": "COMPARATOR",
+    "selectUpTo": "Select up to 3 Pokémon to compare",
+    "compare": "Compare",
+    "close": "Close",
+    "noSelection": "No Pokémon selected"
+  },
+  "favorites": {
+    "title": "FAVORITES",
+    "empty": "No favorited Pokémon yet",
+    "exportJson": "Export as JSON"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "language": {
+    "ptBr": "Português",
+    "en": "English",
+    "switch": "PT | EN"
+  },
+  "pwa": {
+    "install": "Install Cobbledex",
+    "installAvailable": "Installation available",
+    "offlineReady": "Cobbledex ready for offline use!"
+  },
+  "genLabels": {
+    "1": "Gen 1",
+    "2": "Gen 2",
+    "3": "Gen 3",
+    "4": "Gen 4",
+    "5": "Gen 5",
+    "6": "Gen 6",
+    "7": "Gen 7",
+    "8": "Gen 8",
+    "9": "Gen 9"
+  }
+}

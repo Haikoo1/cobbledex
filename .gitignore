@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Generated data files (can be regenerated via scripts)
+# Comment these out if you want to commit the generated data
+# data/pokemon.json
+# data/evolutions.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/settings.json
+*.swp
+*.swo
+
+# Temp files
+*.log
