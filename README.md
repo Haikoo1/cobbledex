@@ -1,220 +1,240 @@
 # Cobbledex — Cobblemon Pokédex
 
-> A complete, offline-capable Pokédex for the [Cobblemon Minecraft mod](https://cobblemon.com/), built with vanilla HTML/CSS/JS.
+> Uma Pokédex completa e funcional offline para o mod [Cobblemon Minecraft](https://cobblemon.com/), construída com HTML/CSS/JS padrão.
 
 ![Cobbledex Preview](https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png)
 
-## ✨ Features
+## ✨ Recursos
 
-- **🔍 Advanced Search & Filters** — Search by name, filter by type (multi-select), generation, minimum stats, and sort by various fields
-- **📊 Detailed Pokémon View** — Stats bars, abilities, evolution chains, type weaknesses, spawn conditions, drops, and breeding info
-- **💖 Favorites** — Save your favorite Pokémon to localStorage, export as JSON
-- **⚖ Comparator** — Compare up to 3 Pokémon side-by-side in a stat table
-- **🌙 Dark/Light Mode** — Respects system preference, toggle persists
-- **🌐 Internationalization** — English and Portuguese (pt-BR) with easy extensibility
-- **📱 Responsive & Mobile-First** — Works great on phones, tablets, and desktops
-- **⚡ PWA** — Install as a standalone app, works offline thanks to Service Worker
-- **🕹️ Retro Aesthetic** — Pixel-art inspired UI with scanline effects and game-like animations
+- **🔍 Busca e Filtros Avançados** — Busque por nome, filtre por tipo (seleção múltipla), geração, atributos mínimos e classifique por diversos campos
+- **📊 Visualização Detalhada de Pokémon** — Barras de atributos, habilidades, cadeias evolutivas, fraquezas de tipo, condições de aparição, drops e informações de criação
+- **💖 Favoritos** — Salve seus Pokémon favoritos no localStorage e exporte como JSON
+- **⚖ Comparador** — Compare até 3 Pokémon lado a lado em uma tabela de atributos
+- **🌙 Modo Claro/Escuro** — Respeita as preferências do sistema, a ativação/desativação persiste
+- **🌐 Internacionalização** — Inglês e Português (pt-BR) com fácil extensibilidade
+- **📱 Responsivo e Priorizado para Dispositivos Móveis** — Funciona perfeitamente em celulares, tablets e computadores
+- **⚡ PWA** — Instale como um aplicativo independente, funciona offline graças ao Service Worker
+- **🕹️ Estética Retrô** — Interface inspirada em pixel art efeitos de linhas de varredura e animações semelhantes a jogos
 
-## 🚀 Quick Start
+## 🚀 Início Rápido
 
-### Option 1: Open directly
+### Opção 1: Abrir diretamente
 
-Simply open `index.html` in your browser:
+Basta abrir o arquivo `index.html` no seu navegador:
 
 ```bash
-# From the project root
-open pokedex-cobblemon/index.html
+# Na raiz do projeto
+abra pokedex-cobblemon/index.html
 ```
 
-### Option 2: Serve locally (recommended for PWA)
+### Opção 2: Servir localmente (recomendado para PWA)
 
-Use any static file server:
+Use qualquer servidor de arquivos estáticos:
 
 ```bash
-# Using Python
+# Usando Python
 cd pokedex-cobblemon && python3 -m http.server 8080
 
-# Using Node.js (if you have npx)
+# Usando Node.js (se você tiver o npx)
 cd pokedex-cobblemon && npx serve .
 
-# Using PHP
+# Usando PHP
 cd pokedex-cobblemon && php -S localhost:8080
 ```
 
-Then open `http://localhost:8080` in your browser.
+Em seguida, abra `http://localhost:8080` no seu navegador.
 
-## 🗂️ Project Structure
+## 🗂️ Estrutura do Projeto
 
 ```
 pokedex-cobblemon/
-├── index.html              # Main Pokédex page
-├── pokemon.html            # Individual Pokémon detail page
-├── manifest.json           # PWA manifest
-├── sw.js                   # Service Worker (offline support)
+├── index.html # Página principal da Pokédex
+├── pokemon.html # Página de detalhes de cada Pokémon
+├── manifest.json # Manifesto do PWA
+├── sw.js # Service Worker (suporte offline)
 ├── css/
-│   ├── reset.css           # CSS reset / normalize
-│   ├── variables.css       # Design tokens (colors, fonts, spacing)
-│   ├── base.css            # Base typography, animations, utilities
-│   ├── components.css      # Cards, badges, buttons, modals, tabs
-│   ├── layout.css          # Grid, header, panels, responsive breakpoints
-│   └── dark-mode.css       # Dark/light mode overrides
+│ ├── reset.css # Redefinição/normalização do CSS
+│ ├── variables.css # Tokens de design (cores, fontes, espaçamento)
+│ ├── base.css # Tipografia básica, animações, utilitários
+│ ├── components.css # Cartões, emblemas, botões, modais, abas
+│ ├── layout.css # Grade, cabeçalho, painéis, breakpoints responsivos
+│ └── dark-mode.css # Sobrescritas dos modos claro/escuro
 ├── js/
-│   ├── main.js             # Entry point for index.html
-│   ├── pokemon-detail.js   # Entry point for pokemon.html
-│   ├── data.js             # Pokémon data loading and shared state
-│   ├── search.js           # Search, filtering, sorting, URL sync
-│   ├── favorites.js        # Favorites management (localStorage)
-│   ├── comparator.js       # Compare up to 3 Pokémon
-│   ├── theme.js            # Dark/light mode toggle
-│   ├── i18n.js             # Internationalization system
-│   └── pwa.js              # Service Worker registration & install prompt
+│ ├── main.js # Ponto de entrada para index.html
+│ ├── pokemon-detail.js # Ponto de entrada para pokemon.html
+│ ├── data.js # Carregamento de dados de Pokémon e estado compartilhado
+│ ├── search.js # Busca, filtragem, ordenação, sincronização de URLs
+│ ├── favorites.js # Gerenciamento de favoritos (localStorage)
+│ ├── comparator.js # Comparar até 3 Pokémon
+│ ├── theme.js # Alternar modo claro/escuro
+│ ├── i18n.js # Sistema de internacionalização
+│ └── pwa.js # Solicitação de registro e instalação do Service Worker
 ├── data/
-│   └── pokemon.json        # All Pokémon data
+│ └── pokemon.json # Todos os dados de Pokémon
 ├── locales/
-│   ├── en.json             # English translations
-│   └── pt-BR.json          # Portuguese (Brazilian) translations
+│ ├── en.json # Traduções em inglês
+│ └── pt-BR.json # Traduções em português (Brasil)
 ├── scripts/
-│   └── fetch-cobbledex.js  # Node.js script to scrape/update Pokémon data
-└── README.md               # This file
+│ └── fetch-cobbledex.js # Script Node.js para coletar/atualizar dados de Pokémon
+└── README.md # Este arquivo
 ```
 
-## 🧩 Modules Overview
+## 🧩 Visão Geral dos Módulos
 
 ### `data.js`
-Central data store. Loads `pokemon.json` via `fetch()` and provides `getPokemonById()`, `getPokemonByName()`, and shared reactive state.
+Armazenamento central de dados. Carrega `pokemon.json` via `fetch()` e fornece `getPokemonById()`, `getPokemonByName()` e estado reativo compartilhado.
 
 ### `search.js`
-Handles the search input (with 300ms debounce), type/generation/stat filters, sorting, and URL query parameter sync (`?type=fire&gen=1&sort=attack-desc`).
+Lida com a entrada de pesquisa (com debounce de 300ms), filtros de tipo/geração/status, ordenação e sincronização de parâmetros de consulta de URL (`?type=fire&gen=1&sort=attack-desc`).
 
 ### `favorites.js`
-Manages favorites in `localStorage` under the key `cobblemon-favorites`. Supports adding/removing, checking status, and exporting as a downloadable JSON file.
+Gerencia os favoritos no `localStorage` sob a chave `cobblemon-favorites`. Suporta adicionar/remover, verificar status e exportar como um arquivo JSON para download.
 
 ### `comparator.js`
-Select up to 3 Pokémon to compare. Opens a modal with a side-by-side stat table, highlighting the highest value in each row.
+Selecione até 3 Pokémon para comparar. Abre um modal com uma tabela de estatísticas lado a lado, destacando o valor mais alto em cada linha.
 
 ### `theme.js`
-Toggles between dark and light mode. Persists preference in `localStorage`. On first visit, respects `prefers-color-scheme`.
+Alterna entre os modos claro e escuro. Armazena a preferência no `localStorage`. Na primeira visita, respeita a configuração `prefers-color-scheme`.
 
 ### `i18n.js`
-Loads locale JSON files from `/locales/`. Supports dot-notation keys, interpolation, and automatic page text updates. Falls back to English for missing keys.
+Carrega arquivos JSON de localização de `/locales/`. Suporta chaves com notação de ponto, interpolação e atualizações automáticas de texto da página. Usa o inglês como alternativa para chaves ausentes.
 
 ### `pwa.js`
-Registers the Service Worker, handles `beforeinstallprompt` for the install button, and shows online/offline notifications.
+Registra o Service Worker, lida com o `beforeinstallprompt` para o botão de instalação e exibe notificações de online/offline.
 
-## 📦 Data Format
+## 📦 Formato dos Dados
 
-Each Pokémon in `data/pokemon.json` follows this structure:
+Cada Pokémon em `data/pokemon.json` segue esta estrutura:
 
 ```json
 {
-  "id": 1,
-  "name": "Bulbasaur",
-  "nameTranslations": { "pt-BR": "Bulbassauro", "en": "Bulbasaur" },
-  "types": ["Grass", "Poison"],
-  "stats": { "hp": 45, "attack": 49, "defense": 49, "spAtk": 65, "spDef": 65, "speed": 45 },
-  "abilities": ["Overgrow", "Chlorophyll"],
-  "height": 0.7,
-  "weight": 6.9,
-  "generation": 1,
-  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-  "spriteShinyUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png",
-  "sprite3dUrl": "https://cobbledex.b-cdn.net/3dmons/previews/large/1.webp",
-  "cobbledexUrl": "https://www.cobbledex.info/pokemon/bulbasaur",
-  "evolutionChain": [1, 2, 3],
-  "description": {
-    "pt-BR": "Por algum tempo após o nascimento...",
-    "en": "For some time after its birth..."
-  },
-  "rarity": "Ultra Rare",
-  "drops": ["Melon Seeds 0-1", "Miracle Seed 5%"],
-  "biomes": ["is_jungle", "is_tropical_island"],
-  "context": "Grounded",
-  "time": "Any",
-  "weather": "Any",
-  "levels": "5-32",
-  "skylight": "8-15",
-  "tags": ["Starter", "Gen 1"],
-  "eggGroups": ["Monster", "Grass"],
-  "growthRate": "medium_slow",
-  "baseHappiness": 50,
-  "catchRate": 45,
-  "genderRate": 1,
-  "hatchCounter": 20,
-  "baseExp": 64
+
+"id": 1,
+
+"name": "Bulbasaur",
+
+"nameTranslations": { "pt-BR": "Bulbassauro", "en": "Bulbasaur" },
+
+"types": ["Grass", "Poison"],
+
+"stats": { "hp": 45, "attack": 49, "defense": 49, "spAtk": 65, "spDef": 65, "speed": 45 },
+
+"abilities": ["Overgrow", "Chlorophyll"],
+
+"height": 0.7,
+
+"weight": 6.9,
+
+"generation": 1,
+
+"spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png", 
+"spriteShinyUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png", 
+"sprite3dUrl": "https://cobbledex.b-cdn.net/3dmons/previews/large/1.webp", 
+"cobbledexUrl": "https://www.cobbledex.info/pokemon/bulbasaur", 
+"evoluçãoChain": [1, 2, 3], 
+"descrição": { 
+"pt-BR": "Por algum tempo após o nascimento...", 
+"pt": "Por algum tempo após seu nascimento..." 
+}, 
+"raridade": "Ultra Raro", 
+"gotas": ["Melão Sementes 0-1", "Semente Milagrosa 5%"],
+
+"biomas": ["é_selva", "é_ilha_tropical"],
+
+"contexto": "Terrestre",
+
+"tempo": "Qualquer",
+
+"clima": "Qualquer",
+
+"níveis": "5-32",
+
+"clara-luz": "8-15",
+
+"tags": ["Inicial", "Geração 1"],
+
+"grupos_de_ovos": ["Monstro", "Grama"],
+
+"taxa_de_crescimento": "média_lenta",
+
+"felicidade_base": 50,
+
+"taxa_de_captura": 45,
+
+"taxa_de_gênero": 1,
+
+"contador_de_eclosão": 20,
+
+"exp_base": 64
 }
 ```
 
-## 🔄 Updating Pokémon Data
+## 🔄 Atualizando Dados de Pokémon
 
-To fetch the latest Pokémon data from PokéAPI and merge with existing Cobblemon-specific data:
+Para obter os dados mais recentes de Pokémon da PokéAPI e mesclá-los com os dados existentes específicos do Cobblemon:
 
-### Prerequisites
-- Node.js v18+ (for native `fetch`) or install `node-fetch`
+### Pré-requisitos
+- Node.js v18+ (para `fetch` nativo) ou instale `node-fetch`
 
-### Run the script
+### Executando o script
 
 ```bash
 cd pokedex-cobblemon
 node scripts/fetch-cobbledex.js
 ```
 
-This will:
-1. Fetch the full Pokémon list from PokéAPI (up to 1000)
-2. Fetch detailed data for each Pokémon (stats, types, abilities, etc.)
-3. Merge with existing Cobblemon-specific data (rarity, drops, spawn conditions)
-4. Write the updated `data/pokemon.json`
+Este script irá:
+1. Obter a lista completa de Pokémon da PokéAPI (até 1000)
+2. Obter dados detalhados para cada Pokémon (atributos, tipos, habilidades, etc.)
+3. Combinar com os dados existentes específicos de Cobblemon (raridade, itens obtidos, condições de aparição)
+4. Escrever o arquivo `data/pokemon.json` atualizado
 
-**Note:** The script preserves manually curated Cobblemon data (rarity, drops, biomes, spawn conditions) from the existing `pokemon.json` file. For new Pokémon without Cobblemon data, sensible defaults are used.
+**Observação:** O script preserva os dados de Cobblemon selecionados manualmente (raridade, itens obtidos, biomas, condições de aparição) do arquivo `pokemon.json` existente. Para novos Pokémon sem dados de Cobblemon, valores padrão adequados serão utilizados.
 
-## 🌍 Adding a New Language
+## 🌍 Adicionando um Novo Idioma
 
-1. Create a new file in `locales/`, e.g., `locales/es.json` (Spanish)
-2. Copy the structure from `locales/en.json` and translate the values
-3. Add the locale code to the `SUPPORTED_LOCALES` array in `js/i18n.js`
-4. The language switcher in the header will automatically include the new option
+1. Crie um novo arquivo em `locales/`, por exemplo, `locales/es.json` (espanhol)
+2. Copie a estrutura de `locales/en.json` e traduza os valores
+3. Adicione o código de idioma ao array `SUPPORTED_LOCALES` em `js/i18n.js`
+4. O seletor de idioma no cabeçalho incluirá automaticamente a nova opção
 
-## 🎨 Customization
+## 🎨 Personalização
 
-### Colors & Theme
-All design tokens are defined as CSS custom properties in `css/variables.css`. Modify the `:root` block to change the color scheme.
+### Cores e Tema
+Todos os elementos de design são definidos como propriedades personalizadas CSS em `css/variables.css`. Modifique o bloco `:root` para alterar o esquema de cores.
 
-### Fonts
-The project uses three Google Fonts:
-- **Press Start 2P** — Retro pixel font for headings
-- **VT323** — Terminal-style font for data
-- **Share Tech Mono** — Digital font for numbers
+### Fontes
+O projeto utiliza três fontes do Google:
+- **Press Start 2P** — Fonte retrô em pixel art para títulos
+- **VT323** — Fonte estilo terminal para dados
+- **Share Tech Mono** — Fonte digital para números
 
-Change them in `css/base.css` and update `variables.css` accordingly.
+Altere-as em `css/base.css` e atualize `variables.css` de acordo.
 
-## 📱 PWA Installation
+## 📱 Instalação do PWA
 
-When visiting the site in a Chromium-based browser (Chrome, Edge, etc.), you'll see an "Install Cobbledex" button in the header. Click it to install the app as a standalone PWA that works offline.
+Ao visitar o site em um navegador baseado no Chromium (Chrome, Edge, etc.), você verá um botão "Instalar Cobbledex" no cabeçalho. Clique nele para instalar o aplicativo como um PWA independente que funciona offline.
 
-The Service Worker (`sw.js`) uses a **Cache First** strategy for static assets and the data JSON, and a **Network First** strategy for other content.
+O Service Worker (`sw.js`) usa uma estratégia de **Cache Primeiro** para recursos estáticos e o JSON de dados, e uma estratégia de **Rede Primeiro** para outros conteúdos.
 
-## 🧪 Testing
+## 🧪 Testando
 
-To test the application:
+Para testar o aplicativo:
 
-1. Serve locally (see Quick Start)
-2. Open in a mobile viewport (Chrome DevTools → Toggle Device Toolbar)
-3. Test at 375px, 390px, 768px, 1280px widths
-4. Test offline: DevTools → Network → Offline
-5. Test installation: DevTools → Application → Manifest → "Add to homescreen"
+1. Execute localmente (consulte o Guia Rápido)
+2. Abra em uma janela de visualização móvel (Chrome DevTools → Ativar/Desativar Barra de Ferramentas do Dispositivo)
+3. Teste com larguras de 375px, 390px, 768px e 1280px
+4. Teste offline: DevTools → Rede → Offline
+5. Teste a instalação: DevTools → Aplicativo → Manifesto → "Adicionar à tela inicial"
 
-## 🛠️ Tech Stack
+## 🛠️ Tecnologias Utilizadas
 
-- **Vanilla HTML/CSS/JS** — No frameworks, no bundlers, no dependencies
-- **PokéAPI** — Pokémon data source
-- **Cobbledex CDN** — 3D model previews
-- **Service Worker** — Offline caching
-- **localStorage** — Persisting preferences and favorites
-
-## 📄 License
-
-MIT © Cobbledex Contributors
+- **HTML/CSS/JS puro** — Sem frameworks, sem bundlers, sem dependências
+- **PokéAPI** — Fonte de dados Pokémon
+- **CDN Cobbledex** — Pré-visualizações de modelos 3D
+- **Service Worker** — Cache offline
+- **localStorage** — Persistência de preferências e favoritos
 
 ---
 
-*Built for the Cobblemon community. Not affiliated with Nintendo, Game Freak, or The Pokémon Company.*
+*Criado para a comunidade Cobblemon. Não afiliado à Nintendo, Game Freak ou The Pokémon Company.*
